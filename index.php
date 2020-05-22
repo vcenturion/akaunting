@@ -6,6 +6,8 @@
  * @link        https://akaunting.com
  */
 
+// cambio Victor
+
 // Define minimum supported PHP version
 define('AKAUNTING_PHP', '7.2.5');
 

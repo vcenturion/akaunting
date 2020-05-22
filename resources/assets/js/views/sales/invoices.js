@@ -291,13 +291,18 @@ const app = new Vue({
 
         onSelectItem(item, index) {
             let tax_id = (item.tax_id) ? [item.tax_id.toString()] : '';
+            let precision = 2;
+
+            if (Number.isInteger(this.currency.precision)) {
+                precision = this.currency.precision;
+            }
 
             this.form.items[index].item_id = item.id;
             this.form.items[index].name = item.name;
-            this.form.items[index].price = (item.sale_price).toFixed(2);
+            this.form.items[index].price = (item.sale_price).toFixed(precision);
             this.form.items[index].quantity = 1;
             this.form.items[index].tax_id = tax_id;
-            this.form.items[index].total = (item.sale_price).toFixed(2);
+            this.form.items[index].total = (item.sale_price).toFixed(precision);
         },
 
         // remove invocie item row => row_id = index

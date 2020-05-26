@@ -40,6 +40,16 @@
                     </label>
                 </div>
             </div>
+
+            <div class="col-md-4 text-center px-0">
+                <div class="bg-print border-radius-default print-edge choose" @click="invoice_form.template='quantica'">
+                    <img src="{{ asset('public/img/invoice_templates/quantica.png') }}" class="mb-1 mt-3" height="200" alt="quantica"/>
+                    <label>
+                        <input type="radio" name="template" value="quantica" v-model="invoice_form.template">
+                        Quantica S.R.L.
+                    </label>
+                </div>
+            </div>
         </div>
 
         <div class="row mt-4">
